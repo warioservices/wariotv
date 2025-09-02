@@ -65,7 +65,7 @@ const Support = () => {
     try {
       const message = `Bonjour, j'ai besoin d'aide concernant mon abonnement Wario TV.%0A%0AInformations :%0A- Identifiant : ${formData.identifier}%0A- Prénom : ${formData.firstName}%0A- Problème : ${formData.problem}%0A%0AMerci pour votre aide !`;
       
-      const whatsappUrl = `https://wa.me/+33123456789?text=${message}`;
+      const whatsappUrl = `https://wa.me/+33745687745?text=${message}`;
       
       // Open WhatsApp in a new tab
       window.open(whatsappUrl, '_blank');
@@ -229,7 +229,7 @@ const Support = () => {
 
                   <Button
                     type="submit"
-                    className="w-full bg-wario-red hover:bg-wario-red/90 text-white transition-colors group"
+                    className="w-full bg-whatsapp hover:bg-whatsapp/90 text-white transition-colors group"
                     disabled={isSubmitting}
                   >
                     <MessageCircle className="w-5 h-5 mr-2 group-hover:scale-110 transition-transform" />

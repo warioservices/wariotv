@@ -20,11 +20,11 @@ const Header = () => {
         <div className="flex items-center justify-between">
           <div className="flex items-center space-x-2">
             <img
-              src={logoImage}
+              src={logoImage} 
               alt="Logo Wario TV"
-              className=" h-8 rounded-lg object-cover"
+              className="h-8 rounded-lg object-cover cursor-pointer"
+              onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
             />
-            
           </div>
 
           {/* Desktop Navigation */}

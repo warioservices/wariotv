@@ -49,10 +49,7 @@ const Hero = () => {
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           <div className="text-center lg:text-left animate-fade-in">
             <h1 className="text-5xl lg:text-7xl font-bold mb-6 leading-tight">
-              Votre divertissement
-              <span className="bg-gradient-primary bg-clip-text text-transparent block">
-                sans limite
-              </span>
+              Toutes vos chaînes, films et séries réunis au même endroit
             </h1>
             
             <p className="text-xl text-muted-foreground mb-8 max-w-2xl">

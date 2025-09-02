@@ -1,30 +1,32 @@
-import { Tv, MessageCircle, Shield, Clock } from "lucide-react";
-
+import { Tv, MessageCircle, Shield, Clock, Phone, MapPin } from "lucide-react";
+import logoImage from "@/assets/logo.png";
+import { Link } from 'react-router-dom'; // si tu utilises react-router
 const Footer = () => {
   const scrollToSection = (sectionId: string) => {
     const element = document.getElementById(sectionId);
     if (element) {
-      element.scrollIntoView({ behavior: 'smooth' });
+      element.scrollIntoView({ behavior: "smooth" });
     }
   };
 
   return (
     <footer className="bg-card border-t border-border py-16">
       <div className="container mx-auto px-4">
-        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+        <div className="grid md:grid-cols-2 lg:grid-cols-5 gap-8">
           {/* Brand */}
           <div className="space-y-4">
             <div className="flex items-center space-x-2">
-              <div className="w-8 h-8 bg-gradient-primary rounded-lg flex items-center justify-center">
-                <Tv className="w-5 h-5 text-white" />
-              </div>
-              <h3 className="text-xl font-bold bg-gradient-primary bg-clip-text text-transparent">
-                Wario TV
-              </h3>
-            </div>
+  <img
+    src={logoImage}
+    alt="Wario TV"
+    className="h-10 w-auto cursor-pointer"
+    onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
+  />
+</div>
+
             <p className="text-muted-foreground text-sm">
-              Votre divertissement sans limite. Plus de 12 ans d'expérience 
-              dans le domaine du divertissement numérique premium.
+              Votre divertissement sans limite. Plus de 12 ans d'expérience dans
+              le domaine du divertissement numérique premium.
             </p>
           </div>
 
@@ -34,7 +36,7 @@ const Footer = () => {
             <ul className="space-y-2 text-sm">
               <li>
                 <button
-                  onClick={() => scrollToSection('offers')}
+                  onClick={() => scrollToSection("offers")}
                   className="text-muted-foreground hover:text-wario-purple transition-colors"
                 >
                   Nos Offres
@@ -42,7 +44,7 @@ const Footer = () => {
               </li>
               <li>
                 <button
-                  onClick={() => scrollToSection('catalog')}
+                  onClick={() => scrollToSection("catalog")}
                   className="text-muted-foreground hover:text-wario-purple transition-colors"
                 >
                   Catalogue
@@ -50,7 +52,7 @@ const Footer = () => {
               </li>
               <li>
                 <button
-                  onClick={() => scrollToSection('test')}
+                  onClick={() => scrollToSection("test")}
                   className="text-muted-foreground hover:text-wario-purple transition-colors"
                 >
                   Test Gratuit
@@ -58,7 +60,7 @@ const Footer = () => {
               </li>
               <li>
                 <button
-                  onClick={() => scrollToSection('support')}
+                  onClick={() => scrollToSection("support")}
                   className="text-muted-foreground hover:text-wario-purple transition-colors"
                 >
                   Support
@@ -78,21 +80,42 @@ const Footer = () => {
             </ul>
           </div>
 
-          {/* Contact & Garanties */}
+          {/* Garanties */}
           <div className="space-y-4">
             <h4 className="font-semibold text-foreground">Garanties</h4>
             <div className="space-y-3">
               <div className="flex items-center space-x-2">
                 <Shield className="w-4 h-4 text-wario-blue" />
-                <span className="text-sm text-muted-foreground">Service fiable</span>
+                <span className="text-sm text-muted-foreground">
+                  Service fiable
+                </span>
               </div>
               <div className="flex items-center space-x-2">
                 <Clock className="w-4 h-4 text-wario-purple" />
-                <span className="text-sm text-muted-foreground">12+ ans d'expérience</span>
+                <span className="text-sm text-muted-foreground">
+                  12+ ans d'expérience
+                </span>
               </div>
               <div className="flex items-center space-x-2">
                 <MessageCircle className="w-4 h-4 text-wario-red" />
-                <span className="text-sm text-muted-foreground">Support réactif</span>
+                <span className="text-sm text-muted-foreground">
+                  Support réactif
+                </span>
+              </div>
+            </div>
+          </div>
+
+          {/* Contact */}
+          <div className="space-y-4">
+            <h4 className="font-semibold text-foreground">Contact</h4>
+            <div className="space-y-3 text-sm text-muted-foreground">
+              <div className="flex items-center space-x-2">
+                <Phone className="w-4 h-4 text-wario-green" />
+                <span>+33 745 68 77 45</span>
+              </div>
+              <div className="flex items-center space-x-2">
+                <MapPin className="w-4 h-4 text-wario-purple" />
+                <span>Lille, 59000, France</span>
               </div>
             </div>
           </div>
@@ -101,7 +124,8 @@ const Footer = () => {
         <div className="border-t border-border mt-12 pt-8">
           <div className="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
             <p className="text-sm text-muted-foreground">
-              © 2024 Wario TV. Tous droits réservés. Service de divertissement premium.
+              © 2024 Wario TV. Tous droits réservés. Service de divertissement
+              premium.
             </p>
             <p className="text-sm text-muted-foreground italic">
               "Technologie fiable et éprouvée depuis plus de 12 ans"

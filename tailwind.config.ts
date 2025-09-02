@@ -59,6 +59,7 @@ export default {
 					dark: 'hsl(var(--wario-dark))',
 					card: 'hsl(var(--wario-card))'
 				},
+				whatsapp: 'hsl(var(--whatsapp))',
 				sidebar: {
 					DEFAULT: 'hsl(var(--sidebar-background))',
 					foreground: 'hsl(var(--sidebar-foreground))',
