@@ -74,15 +74,14 @@ const Recommendations = () => {
           
           <Button
             onClick={() => setIsOpen(!isOpen)}
-            variant="outline"
-            className="group hover:bg-primary hover:text-primary-foreground transition-all duration-300"
+            className="bg-green-600 text-white hover:bg-green-700 shadow-lg hover:shadow-xl transition-all duration-300"
           >
             <ShoppingCart className="w-5 h-5 mr-2" />
             Voir nos recommandations
             {isOpen ? (
-              <ChevronUp className="w-4 h-4 ml-2 group-hover:scale-110 transition-transform" />
+              <ChevronUp className="w-4 h-4 ml-2 transition-transform" />
             ) : (
-              <ChevronDown className="w-4 h-4 ml-2 group-hover:scale-110 transition-transform" />
+              <ChevronDown className="w-4 h-4 ml-2 transition-transform" />
             )}
           </Button>
         </div>
