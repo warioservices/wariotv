@@ -17,7 +17,7 @@ const Hero = () => {
       {/* Animated floating background images */}
       <div className="absolute inset-0 pointer-events-none">
         <div 
-          className="absolute top-1/4 w-96 h-56 rounded-lg opacity-30 animate-floating-bg"
+          className="absolute top-1/4 w-96 h-56 rounded-lg opacity-60 animate-floating-bg"
           style={{
             backgroundImage: `url(${footballBg})`,
             backgroundSize: 'cover',
@@ -27,7 +27,7 @@ const Hero = () => {
         />
         <div 
         
-          className="absolute top-1/2 w-96 h-56 rounded-lg opacity-30 animate-floating-bg"
+          className="absolute top-1/2 w-96 h-56 rounded-lg opacity-60 animate-floating-bg"
           style={{
             backgroundImage: `url(${seriesBg})`,
             backgroundSize: 'cover',
@@ -36,7 +36,7 @@ const Hero = () => {
           }}
         />
         <div 
-          className="absolute top-3/4 w-96 h-56 rounded-lg opacity-30 animate-floating-bg"
+          className="absolute top-3/4 w-96 h-56 rounded-lg opacity-60 animate-floating-bg"
           style={{
             backgroundImage: `url(${moviesBg})`,
             backgroundSize: 'cover',

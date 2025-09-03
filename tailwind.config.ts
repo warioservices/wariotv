@@ -127,10 +127,19 @@ export default {
 						opacity: '0'
 					},
 					'10%': {
+						opacity: '0.8'
+					},
+					'30%': {
+						opacity: '0.4'
+					},
+					'50%': {
+						opacity: '0.7'
+					},
+					'70%': {
 						opacity: '0.3'
 					},
 					'90%': {
-						opacity: '0.3'
+						opacity: '0.6'
 					},
 					'100%': {
 						transform: 'translateX(100vw) translateY(-50%)',

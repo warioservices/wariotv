@@ -7,6 +7,7 @@ import TestForm from "@/components/TestForm";
 import Support from "@/components/Support";
 import Footer from "@/components/Footer";
 import { FennecMascot } from "@/components/ui/fennec-mascot";
+import NewReleases from "@/components/NewReleases";
 
 const Index = () => {
   return (
@@ -15,6 +16,7 @@ const Index = () => {
       <main>
         <Hero />
         <Offers />
+        <NewReleases />
         <Catalog />
         <Recommendations />
         <TestForm />
