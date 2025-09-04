@@ -50,55 +50,71 @@ const AutoCarousel = ({
   }, [api, delay]);
 
   return (
-    <Carousel opts={{ align: "start", loop: true }} setApi={setApi}>
-      <CarouselContent>
-        {items.map(item => {
-          const expanded = !!expandedMap[item.id];
-          const IconComponent = item.icon;
+    <div className="overflow-x-hidden">
+      <Carousel opts={{ align: "start", loop: true }} setApi={setApi}>
+        <CarouselContent className="gap-4">
+          {items.map(item => {
+            const expanded = !!expandedMap[item.id];
+            const IconComponent = item.icon;
 
-          return (
-            <CarouselItem key={item.id}>
-              <Card className={`relative bg-gradient-card border-border hover:shadow-2xl hover:scale-105 hover:ring-2 hover:ring-${item.color} transition-all duration-300 group`}>
-                <div className="aspect-video bg-muted rounded-t-lg overflow-hidden">
-                  <img src={item.image} alt={item.title} className="w-full h-full object-cover" loading="lazy" />
-                </div>
+            return (
+              <CarouselItem
+                key={item.id}
+                className="w-full sm:w-[250px] md:w-full flex-shrink-0"
+              >
+                <Card
+                  className={`relative w-full bg-gradient-card border-border
+                    hover:shadow-2xl sm:hover:scale-105 hover:ring-2 hover:ring-${item.color}
+                    transition-all duration-300 group`}
+                >
+                  <div className="aspect-video bg-muted rounded-t-lg overflow-hidden">
+                    <img
+                      src={item.image}
+                      alt={item.title}
+                      className="w-full h-full object-cover"
+                      loading="lazy"
+                    />
+                  </div>
 
-                <CardContent className="p-4">
-                  <div className="flex justify-center mb-3">
-                    <div className={`w-12 h-12 rounded-full bg-${item.color}/20 flex items-center justify-center`}>
-                      <IconComponent className={`w-6 h-6 text-${item.color}`} />
+                  <CardContent className="p-4">
+                    <div className="flex justify-center mb-3">
+                      <div className={`w-12 h-12 rounded-full bg-${item.color}/20 flex items-center justify-center`}>
+                        <IconComponent className={`w-6 h-6 text-${item.color}`} />
+                      </div>
                     </div>
-                  </div>
 
-                  <CardTitle className="text-lg font-bold text-center mb-2">{item.title}</CardTitle>
+                    <CardTitle className="text-lg font-bold text-center mb-2">
+                      {item.title}
+                    </CardTitle>
 
-                  <p className={`text-muted-foreground text-sm mb-3 ${expanded ? "" : "line-clamp-3"}`}>
-                    {item.description}
-                  </p>
+                    <p className={`text-muted-foreground text-sm mb-3 ${expanded ? "" : "line-clamp-3"}`}>
+                      {item.description}
+                    </p>
 
-                  <div className="flex justify-between items-center text-sm">
-                    <span className="text-primary font-medium">
-                      {item.icon === Tv2 && item.date && item.time
-                        ? `${item.date} - ${item.time}`
-                        : item.rating
-                        ? item.rating
-                        : item.episodes
-                        ? item.episodes
-                        : item.time}
-                    </span>
-                    <Button size="sm" variant="ghost" onClick={() => toggleExpanded(item.id)}>
-                      {expanded ? "Voir moins ↑" : "Voir plus →"}
-                    </Button>
-                  </div>
-                </CardContent>
-              </Card>
-            </CarouselItem>
-          );
-        })}
-      </CarouselContent>
-      <CarouselPrevious className="left-2" />
-      <CarouselNext className="right-2" />
-    </Carousel>
+                    <div className="flex justify-between items-center text-sm">
+                      <span className="text-primary font-medium">
+                        {item.icon === Tv2 && item.date && item.time
+                          ? `${item.date} - ${item.time}`
+                          : item.rating
+                          ? item.rating
+                          : item.episodes
+                          ? item.episodes
+                          : item.time}
+                      </span>
+                      <Button size="sm" variant="ghost" onClick={() => toggleExpanded(item.id)}>
+                        {expanded ? "Voir moins ↑" : "Voir plus →"}
+                      </Button>
+                    </div>
+                  </CardContent>
+                </Card>
+              </CarouselItem>
+            );
+          })}
+        </CarouselContent>
+        <CarouselPrevious className="left-2" />
+        <CarouselNext className="right-2" />
+      </Carousel>
+    </div>
   );
 };
 
@@ -143,7 +159,7 @@ const NewReleases = () => {
           </p>
         </div>
 
-        <div className="grid gap-8 md:grid-cols-1 lg:grid-cols-3">
+        <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-3">
           {categories.map((category, index) => (
             <AutoCarousel
               key={category.title}
