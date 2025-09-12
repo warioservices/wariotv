@@ -4,13 +4,14 @@ import { Film, Tv, Tv2 } from "lucide-react";
 import { useEffect, useState } from "react";
 import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from "@/components/ui/carousel";
 import NobodyImage from "@/assets/Films/Nobody2.jpg";
-import DesjourImage from "@/assets/Films/Des jours meilleurs.jpg";
+import McWalterImage from "@/assets/Films/MCWALTER.jpg";
 import PopeyeImage from "@/assets/Films/Popeye the Slayer Man (2025).jpg";
 import azmatImage from "@/assets/Series/azmat.jpg";
 import goImage from "@/assets/Series/Gözleri Karadeniz.jpg";
 import amandaImage from "@/assets/Series/The Twisted Tale of Amanda Knox 2025.jpg";
-import canImage from "@/assets/Chaines/CAN-2025.jpg";
-import francematchImage from "@/assets/Chaines/France.jpg";
+import ufcImage from "@/assets/Chaines/UFCseptembre.jpg";
+import arsenalImage from "@/assets/Chaines/arsenalcity.jpg";
+import loscImage from "@/assets/Chaines/losc.jpg"
 
 interface Item {
   id: string;
@@ -128,7 +129,16 @@ const NewReleases = () => {
   const newMovies: Item[] = [
     { id: "movie1", title: "Nobody 2", description: "Un père en quête de repos en famille se retrouve en pleine bataille contre une dangereuse criminelle… Des vacances qui tournent vite au cauchemar. Action brutale, humour grinçant et cascadeur aguerri, Bob Odenkirk reprend du service dans cette suite explosive.", image: NobodyImage, rating: "7.2/10", icon: Film, color: "wario-purple" },
     { id: "movie2", title: "Popeye the Slayer Man (2025)", description: "Un groupe d'amis s'aventure dans une usine abandonnée de conserves d'épinards, mais ils réveillent une légende terrifiante : Popeye, l'homme marin devenu tueur impitoyable.", image: PopeyeImage, rating: "6/10", icon: Film, color: "wario-blue" },
-    { id: "movie3", title: "Des jours meilleurs (2025)", description: "Trois femmes aux parcours chaotiques s'unissent pour participer au Rallye des Dunes dans le désert marocain. Une aventure humaine, pleine d'humour et d'émotion, qui les mène vers la rédemption et la solidarité.", image: DesjourImage, rating: "7/10", icon: Film, color: "wario-red" },
+    {
+  id: "movie3",
+  title: "McWalter (2025)",
+  description: "McWalter, agent légendaire de l'agence secrète américaine NUS, est accusé à tort d'une série d'attaques mondiales. Pour prouver son innocence, il s'enfuit et se lance dans une course effrénée pour déjouer une conspiration mondiale, tout en étant poursuivi par ses anciens coéquipiers.",
+  image: McWalterImage, // remplacer par la variable ou le lien de l'image du film
+  rating: "7/10",
+  icon: Film,
+  color: "wario-red"
+}
+
   ];
 
   const newSeries: Item[] = [
@@ -138,9 +148,39 @@ const NewReleases = () => {
   ];
 
   const newChannels: Item[] = [
-    { id: "chan1", title: "Guinée vs Algérie", description: "Match de qualification pour la Coupe du Monde 2026. L’Algérie affronte la Guinée à Casablanca suite à la relocalisation du match. Enjeu : rester en tête du groupe et se rapprocher de la qualification.", date: "8 septembre 2025", image: canImage, time: "À confirmer", icon: Tv2, color: "wario-red" },
-    { id: "chan2", title: "Zambie vs Maroc", description: "Qualification pour la Coupe du Monde 2026. Le Maroc se déplace à Lusaka pour affronter la Zambie et consolider sa place dans le groupe. Un match décisif avec beaucoup de pression.", date: "8 septembre 2025", image: canImage, time: "9h (heure locale Lusaka)", icon: Tv2, color: "wario-green" },
-    { id: "chan3", title: "France vs Islande", description: "Match de qualification pour la Coupe du Monde 2026 (UEFA). La France reçoit l’Islande au Parc des Princes pour consolider sa place dans le groupe et viser la qualification directe.", date: "9 septembre 2025", image: francematchImage, time: "20h45 (heure locale Paris)", icon: Tv2, color: "wario-blue" },
+   {
+  id: "chan1",
+  title: "LOSC Lille vs Paris Saint-Germain",
+  description: "Match de la 7e journée de Ligue 1. Le PSG, invaincu cette saison, se déplace au Stade Pierre-Mauroy pour affronter Lille, qui reste sur une série de 2 victoires et 1 nul. Un choc entre deux équipes en forme.",
+  date: "5 octobre 2025",
+  image: loscImage,
+  time: "20h45 (heure locale Lille)",
+  icon: "Tv2",
+  color: "wario-blue"
+},
+
+    {
+  id: "chan2",
+  title: "Diego Lopes vs. Jean Silva",
+  description: "Dans le cadre de l'événement 'Noche UFC 3', Diego Lopes (26-7) affronte Jean 'Lord' Silva (16-2) dans un combat poids plume très attendu. Lopes, classé numéro 2, cherche à rester dans la course au titre après une défaite par décision contre Alexander Volkanovski. Silva, classé numéro 10, est un frappeur puissant avec une série de victoires par KO et soumission, visant à se propulser vers une chance au titre.",
+  date: "13 septembre 2025",
+  image: ufcImage,
+  time: "21h (heure locale San Antonio)",
+  icon: "Tv2",
+  color: "wario-red"
+},
+
+{
+  id: "chan3",
+  title: "Arsenal vs Manchester City",
+  description: "Confrontation majeure en Premier League entre deux géants du football anglais. Arsenal, actuellement 3e, accueille Manchester City, 13e, au Emirates Stadium. Un match crucial pour les deux équipes en ce début de saison.",
+  date: "21 septembre 2025",
+  image: arsenalImage,
+  time: "16h30 (heure locale Londres)",
+  icon: "Tv2",
+  color: "wario-blue"
+}
+,
   ];
 
   const categories: Category[] = [
