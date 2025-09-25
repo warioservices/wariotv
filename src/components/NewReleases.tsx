@@ -6,12 +6,12 @@ import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious
 import NobodyImage from "@/assets/Films/Nobody2.jpg";
 import McWalterImage from "@/assets/Films/MCWALTER.jpg";
 import PopeyeImage from "@/assets/Films/Popeye the Slayer Man (2025).jpg";
-import azmatImage from "@/assets/Series/azmat.jpg";
 import goImage from "@/assets/Series/Gözleri Karadeniz.jpg";
 import amandaImage from "@/assets/Series/The Twisted Tale of Amanda Knox 2025.jpg";
 import ufcImage from "@/assets/Chaines/UFCseptembre.jpg";
 import arsenalImage from "@/assets/Chaines/arsenalcity.jpg";
 import loscImage from "@/assets/Chaines/losc.jpg"
+import elrefuImage from "@/assets/Series/elrefugio.jpg"
 
 interface Item {
   id: string;
@@ -142,10 +142,35 @@ const NewReleases = () => {
   ];
 
   const newSeries: Item[] = [
-    { id: "series1", title: "The Twisted Tale of Amanda Knox 2025", description: "Plongez dans un thriller psychologique haletant inspiré d'une histoire vraie. Cette nouvelle adaptation de 2025 revisite l’affaire Amanda Knox avec des rebondissements inédits, entre manipulations, faux-semblants et quête de vérité. Une série qui vous tiendra en haleine du premier au dernier épisode.", image: amandaImage, episodes: "10 épisodes", icon: Tv, color: "wario-green" },
-    { id: "series2", title: "Compte à rebours", description: "Un drame palpitant où chaque décision compte. Entre amour, trahisons et secrets, les personnages se retrouvent face à un compte à rebours implacable qui peut tout changer. Une série pleine d’émotions et de rebondissements.", image: azmatImage, episodes: "30 épisodes", icon: Tv, color: "wario-blue" },
-    { id: "series3", title: "Gözleri Karadeniz", description: "Un drame turc intense se déroulant sur les rives de la mer Noire. Il raconte le combat d’une femme pour échapper à la violence et trouver refuge auprès d’une famille qui défie les traditions. Amour, courage et espoir se mêlent dans une histoire émouvante et bouleversante.", image: goImage, episodes: "64 épisodes", icon: Tv, color: "wario-purple" },
-  ];
+  { 
+    id: "series1", 
+    title: "The Twisted Tale of Amanda Knox 2025", 
+    description: "Plongez dans un thriller psychologique haletant inspiré d'une histoire vraie. Cette nouvelle adaptation de 2025 revisite l’affaire Amanda Knox avec des rebondissements inédits, entre manipulations, faux-semblants et quête de vérité. Une série qui vous tiendra en haleine du premier au dernier épisode.", 
+    image: amandaImage, 
+    episodes: "10 épisodes", 
+    icon: Tv, 
+    color: "wario-green" 
+  },
+  { 
+    id: "series2", 
+    title: "El Refugio Atómico", 
+    description: "Dans un futur sombre, un groupe de survivants se réfugie dans un abri atomique pour échapper à une guerre dévastatrice. Mais à mesure que les tensions montent et que les ressources diminuent, la véritable menace ne vient peut-être pas de l’extérieur, mais de l’intérieur. Suspense, paranoïa et révélations au rendez-vous.", 
+    image:elrefuImage , 
+    episodes: "24 épisodes", 
+    icon: Tv, 
+    color: "wario-blue" 
+  },
+  { 
+    id: "series3", 
+    title: "Gözleri Karadeniz", 
+    description: "Un drame turc intense se déroulant sur les rives de la mer Noire. Il raconte le combat d’une femme pour échapper à la violence et trouver refuge auprès d’une famille qui défie les traditions. Amour, courage et espoir se mêlent dans une histoire émouvante et bouleversante.", 
+    image: goImage, 
+    episodes: "64 épisodes", 
+    icon: Tv, 
+    color: "wario-purple" 
+  },
+];
+
 
   const newChannels: Item[] = [
    {
